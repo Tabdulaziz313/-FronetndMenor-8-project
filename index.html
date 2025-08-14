@@ -29,8 +29,14 @@
     <main>
       <section class="group">
         <div class="container">
-          <picture>
-            <img src="./assets/tablet/image-hero.png" alt="Img hero" />
+          <picture class="group__picture">
+            <img src="./assets/desktop/image-hero-left.png" alt="Image hero left" class="group__img__left">
+            <img src="./assets/desktop/image-hero-right.png" alt="Image hero right"  class="group__img__right">
+            <img
+              src="./assets/tablet/image-hero.png"
+              class="group__img__hero"
+              alt="Img hero"
+            />
           </picture>
           <div class="group__text">
             <h1>Group Chat for Everyone</h1>
@@ -38,8 +44,10 @@
               Meet makes it easy to connect with others face-to-face virtually
               and collaborate across any device.
             </p>
-            <button class="group__down">Download <span class="version"> v1.3</span></button>
-            <button class="group__is">What is it? </button>
+            <button class="group__down">
+              Download <span class="version"> v1.3</span>
+            </button>
+            <button class="group__is">What is it?</button>
           </div>
         </div>
       </section>
@@ -64,7 +72,7 @@
             />
           </div>
           <div class="build__text">
-            <span>Built for modern use</span>
+            <span class="build__text__span">Built for modern use</span>
             <h2>Smarter meetings, all in one place</h2>
             <p>
               Send messages, share files, show your screen, and record your
@@ -77,12 +85,14 @@
     </main>
     <footer>
       <div class="container">
-        <h2>Experience more together</h2>
-        <p>
-          Stay connected with reliable HD meetings and unlimited one-on-one and
-          group video sessions.
-        </p>
-        <button>Download <span>v1.3</span></button>
+        <div class="footer">
+          <h2>Experience more together</h2>
+          <p>
+            Stay connected with reliable HD meetings and unlimited one-on-one
+            and group video sessions.
+          </p>
+          <button class="footer__button">Download <span>v1.3</span></button>
+        </div>
       </div>
     </footer>
   </body>

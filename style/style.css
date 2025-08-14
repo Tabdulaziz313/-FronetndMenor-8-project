@@ -27,6 +27,10 @@
   margin: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
   html {
@@ -99,7 +103,7 @@ body {
 .container {
   max-width: 1284px;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 
@@ -110,7 +114,31 @@ body {
   margin: 0 auto;
 }
 
+.group {
+  position: relative;
+  overflow: hidden;
+}
+
+.group__picture {
+  /* position: absolute;  */
+  /* display: block; */
+  padding-bottom: 3rem;
+  padding-top: 4rem;
+  /* transform-origin: center; */
+}
+.group__img__left {
+  display: none;
+}
+.group__img__right {
+  display: none;
+}
+
+.group__img__hero {
+  transform: scale(1.3);
+}
+
 .group__text {
+  /* margin-top: 4rem; */
   text-align: center;
 }
 
@@ -139,18 +167,17 @@ body {
   transition: background 0.3s ease;
 }
 
-.version{
+.version {
   /* color: var(--cyan-300); */
-  color: #71C0D4;
+  color: #71c0d4;
   margin-left: 3px;
 }
 
-
-.group__down:hover  {
+.group__down:hover {
   background-color: var(--cyan-300);
 }
 
-.group__is{
+.group__is {
   background-color: var(--purple-600);
   color: white;
   padding: 1rem 2.5rem;
@@ -162,17 +189,174 @@ body {
   margin: 1rem;
 }
 
-.group__is:hover{
+.group__is:hover {
   background-color: var(--purple-300);
 }
 
-.row__foto{
+.row__foto {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(147.5px, 1fr));
+  margin: 4rem 0;
 }
-.row__foto img{
+.row__foto img {
   border-radius: 5px;
 }
 
+.build__text {
+  max-width: 544px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.build__text__span {
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 1.25rem);
+  color: var(--cyan-600);
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.build__text h2 {
+  font-weight: 900;
+  color: var(--slate-900);
+  font-size: clamp(2rem, calc(3vw + 0.5rem), 2.5rem);
+  margin: 1rem 0 2rem 0;
+}
+
+.build__text p {
+  font-size: 1rem;
+  color: var(--slate-600);
+  font-weight: 500;
+}
+
+footer {
+  height: 320px;
+  background-position: center;
+  background: linear-gradient(rgba(77, 150, 168, 0.8), rgba(77, 150, 168, 0.8)),
+    url("../assets/mobile/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.footer {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  color: white;
+  padding-top: 1rem;
+}
+
+.footer h2 {
+  font-weight: 900;
+  font-size: clamp(2rem, calc(3vw + 0.5rem), 2.5rem);
+  margin: 1rem 0 2rem 0;
+}
+
+.footer p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer__button {
+  display: flex;
+  width: auto;
+  background-color: var(--purple-600);
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 1.75rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 1rem;
+  justify-self: center;
+}
+.footer__button:hover {
+  background-color: #b18bdd;
+}
+
+.footer__button span {
+  margin-left: 5px;
+  color: var(--purple-300);
+}
+
+@media (min-width: 33em) {
+  .row__foto {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1;
+  }
+
+  footer{
+    background: linear-gradient(rgba(77, 150, 168, 0.8), rgba(77, 150, 168, 0.8)),
+    url("../assets/tablet/image-footer.jpg");
+  }
+}
+
+@media (min-width: 48em) {
+  footer{
+    background: linear-gradient(rgba(77, 150, 168, 0.8), rgba(77, 150, 168, 0.8)),
+    url("../assets/desktop/image-footer.jpg");
+  }
+
+
+}
+
+@media (min-width: 62em){
+
+  footer{
+    display: flex;
+    align-items: center;
+
+  }
+  .footer{
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .group__img__left{
+    position: absolute;
+    left: -5rem;
+    display: block;
+  }
+  .group__img__right{
+    position: absolute;
+    right: -5rem;
+    display: block;
+  }
+
+  .group__img__hero{
+    display: none;
+  }
+
+  .group__text{
+    width: 28rem;
+    margin: 0 auto;
+  }  
+}
+
+@media (min-width: 75em){
+  .group__img__left{
+    left: 0;
+  }
+  .group__img__right{
+    right: 0;
+  }
+}
+
+
+@media (min-width: 90em){
+  .group__img__left{
+    left: 5rem;
+  }
+  .group__img__right{
+    right: 5rem;
+  }
+
+}
 
